@@ -1,0 +1,36 @@
+@import "variables";
+
+.login,
+.state{
+  margin-left: 25px;
+  line-height: 64px;
+  color: @basicText;
+}
+
+.nav{
+  height: @navHeight;
+  margin: 10px 0 20px;
+  background-color: @basicColor;
+}
+
+.nav-list{
+  font-size: 0;
+}
+
+.nav-item{
+  display: inline-block;
+  a{
+    display: block;
+    padding: 0 25px;
+    line-height: @navHeight;
+    text-align: center;
+    letter-spacing: .2px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    &:hover{
+      background-color: @basicColorDarken;
+      text-decoration: none;
+    }
+  }
+}

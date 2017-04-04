@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link type="text/css" href="css/reset.css" rel="stylesheet">
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/user.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png">
+        <a class="login pull-right" href="#">退出登录</a>
+        <div class="state pull-right"><strong>当前登录：</strong>admin</div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#">用户管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">地点管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">类别管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main container">
+        <h3>当前用户列表：<a href="#" class="user-add-btn"><span class="glyphicon glyphicon-plus"></span>添加新用户</a></h3>
+        <table class="table table-bordered table-striped table-hover table-responsive">
+            <thead>
+            <tr>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="user-name">Admin</td>
+                <td>admin123456</td>
+                <td class="table-toolbar">
+                    <a href="#" class="user-cog-btn">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <a href="#" class="user-del-btn icon-bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="user-name">User1</td>
+                <td>12332145</td>
+                <td class="table-toolbar">
+                    <a href="#" class="user-cog-btn">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <a href="#" class="user-del-btn icon-bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="user-name">User2</td>
+                <td>Zhaochaoye</td>
+                <td class="table-toolbar">
+                    <a href="#" class="user-cog-btn">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <a href="#" class="user-del-btn icon-bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="user-name">User3</td>
+                <td>Renke</td>
+                <td class="table-toolbar">
+                    <a href="#" class="user-cog-btn">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <a href="#" class="user-del-btn icon-bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="user-add-modal modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加新用户</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="user-add-form" id="userAddForm">
+                        <div class="form-group">
+                            <label class="control-label">用户名：</label>
+                            <input type="text" class="form-control" name="username" placeholder="请输入用户名">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">输入新密码：</label>
+                            <input type="password" class="form-control" name="password" placeholder="请输入新的密码">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary confirm-btn user-add-confirm">确认提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="user-cog-modal modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">用户编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="user-cog-form" id="userCogForm">
+                        <div class="form-group">
+                            <label class="control-label">用户名：</label>
+                            <input type="text" class="form-control" name="username" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">输入新密码：</label>
+                            <input type="password" class="form-control" name="password" placeholder="请输入新的密码">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">确认新密码：</label>
+                            <input type="password" class="form-control" name="repeatpassword" placeholder="请确认新的密码">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary confirm-btn user-cog-confirm">确认提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.modal.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</body>
+</html>
