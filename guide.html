@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标注指南</title>
+    <link type="text/css" href="css/reset.css" rel="stylesheet">
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/guide.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png">
+        <a class="login pull-right" href="#">退出登录</a>
+        <div class="state pull-right"><strong>当前登录：</strong>admin</div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#">用户管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">地点管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">类别管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2 class="title">地点标注指南</h2>
+            <p class="summary">地点标注主要分为以下九个字段信息：地点名称、地点经度、地点纬度、地点位置、地点类别、地点简介、地点推荐指数、地点联系方式、地点图片。
+                其中<span>地点名称、地点经度、地点纬度、地点位置、地点类别</span>这五个字段为必填字段，其他四个字段为选填字段。
+                为了呈现信息的完整性，建议所有字段信息都进行录入。
+            </p>
+            <h3 class="subtitle">如何获取地点经纬度信息？</h3>
+            <p class="step">1.打开坐标拾取系统<a href="http://lbs.qq.com/tool/getpoint/index.html">坐标拾取器-腾讯地图</a>，如下图所示：</p>
+            <img src="img/guide/guide1.png">
+            <p class="step">2.选择地点所在城市，如下图所示（以武汉为例）：</p>
+            <img src="img/guide/guide2.png">
+            <p class="step">3.输入地点名称，进行搜索获得搜索结果，以下以爱品克公司为例：</p>
+            <img src="img/guide/guide3.png">
+            <p class="step">4.结果中的坐标信息即为地点的经纬度，其中位于前面的是<span>纬度</span>,后面的是<span>经度</span>信息
+                地点的经纬度信息是本系统最为关键的信息，必须保证正确。<span>纬度数值较小，一般为30左右，经度数值较大，一般为110左右。</span>可以基于此做初步的判断。
+                直接将数据复制到标注页面中对应的输入框中即可。示例中，30.528080即为爱品克科技有限公司的纬度，114.349610即为爱品克公司的经度。
+            </p>
+            <img src="img/guide/guide4.png">
+            <p class="step">5.搜索结果中的当前地址可以作为<span>地点位置</span>这一字段进行使用。或者自行输入地点位置亦可。不做强制要求。</p>
+            <img src="img/guide/guide5.png">
+        </div>
+    </div>
+</body>
+</html>
